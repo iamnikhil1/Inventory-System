@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1,
+  h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .header-section {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .header-section h1 {
+    font-size: 24px;
+    color: #3498db;
+  }
+  
+  .invoice-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .action-buttons {
+    margin-top: 10px;
+  }
+  
+  .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn-print {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .client-shipper-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  
+  .details-column {
+    width: 48%;
+  }
+  
+  .details-column h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .product-details {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  
+  th,
+  td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .terms-amount-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  
+  .terms-conditions,
+  .amount-section {
+    width: 48%;
+  }
+  
+  .amount-section {
+    text-align: right;
+  }
+  
+  .total {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3498db;
+    margin-top: 5px;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #eee;
+    color: #7f8c8d;
+    font-size: 12px;
+  }
+  
+  @media print {
+    body {
+      background-color: #fff;
+      font-size: 10pt;
+    }
+    .container {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      box-shadow: none;
+    }
+    .action-buttons {
+      display: none;
+    }
+    .client-shipper-section,
+    .product-details,
+    .terms-amount-section {
+      page-break-inside: avoid;
+    }
+    table {
+      font-size: 9pt;
+    }
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    .client-shipper-section,
+    .terms-amount-section {
+      flex-direction: column;
+    }
+    .details-column,
+    .terms-conditions,
+    .amount-section {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .invoice-details {
+      flex-direction: column;
+    }
+  }
+  
+  
